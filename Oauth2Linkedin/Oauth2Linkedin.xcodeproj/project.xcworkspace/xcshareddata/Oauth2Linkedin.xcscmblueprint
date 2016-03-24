@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D5B4F45D19324FFEFDA194CE22583E9F564104FA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D5B4F45D19324FFEFDA194CE22583E9F564104FA" : 0,
+    "810FFBFE827690FF69CFD0F76C5B90F3A7E3112A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5B1F100C-8425-40FD-9F60-E8531A2087A6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D5B4F45D19324FFEFDA194CE22583E9F564104FA" : "OAuth2Repo\/",
+    "810FFBFE827690FF69CFD0F76C5B90F3A7E3112A" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Oauth2Linkedin",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Oauth2Linkedin\/Oauth2Linkedin.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/EthanHess\/RecipeDiary.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "810FFBFE827690FF69CFD0F76C5B90F3A7E3112A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/EthanHess\/OAuth2Linkedin.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D5B4F45D19324FFEFDA194CE22583E9F564104FA"
+    }
+  ]
+}

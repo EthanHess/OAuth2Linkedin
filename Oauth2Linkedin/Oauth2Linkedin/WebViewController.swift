@@ -12,8 +12,8 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var webView: UIWebView!
     
-    let linkedInKey = "75zs3dlkd1hgu8"
-    let linkedInSecret = "SqWclKYYy1NWtsOT"
+    let linkedInKey = ""
+    let linkedInSecret = ""
     let authorizationEndPoint = "https://www.linkedin.com/uas/oauth2/authorization"
     let accessTokenEndPoint = "https://www.linkedin.com/uas/oauth2/accessToken"
 
