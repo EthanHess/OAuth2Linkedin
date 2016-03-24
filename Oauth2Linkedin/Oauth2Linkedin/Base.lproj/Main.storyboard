@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HtW-8f-ns4">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WebViewController" customModule="Oauth2Linkedin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIP-O8-tfN">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7h-Of-iJW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="svq-p3-emq">
+                                        <connections>
+                                            <action selector="dismiss:" destination="BYZ-38-t0r" id="P4M-Xr-JRe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tIP-O8-tfN" firstAttribute="leading" secondItem="M7h-Of-iJW" secondAttribute="leading" id="4Ny-2z-Qzk"/>
+                            <constraint firstItem="tIP-O8-tfN" firstAttribute="top" secondItem="M7h-Of-iJW" secondAttribute="bottom" id="6lZ-hk-sul"/>
+                            <constraint firstItem="tIP-O8-tfN" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="F9g-5a-lXt"/>
+                            <constraint firstItem="M7h-Of-iJW" firstAttribute="trailing" secondItem="tIP-O8-tfN" secondAttribute="trailing" id="T1j-GX-FLb"/>
+                            <constraint firstItem="tIP-O8-tfN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bcE-uA-gpD"/>
+                            <constraint firstItem="M7h-Of-iJW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oEk-J7-vgN"/>
+                            <constraint firstAttribute="trailing" secondItem="M7h-Of-iJW" secondAttribute="trailing" id="yXC-IW-2SN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="tIP-O8-tfN" id="IeC-N6-gIk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1568" y="284"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="adf-3x-Ktr">
+            <objects>
+                <viewController id="HtW-8f-ns4" customClass="ViewController" customModule="Oauth2Linkedin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Elf-aT-DkA"/>
+                        <viewControllerLayoutGuide type="bottom" id="o2o-jI-rHl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rG0-5i-ZTP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giX-lU-Jaq">
+                                <rect key="frame" x="196" y="54" width="209" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Fhb-Tm-IMi"/>
+                                    <constraint firstAttribute="width" constant="209" id="u2x-sj-HSW"/>
+                                </constraints>
+                                <state key="normal" title="Linkedin Sign In"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="cIS-lL-tPC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70r-Nc-CP4">
+                                <rect key="frame" x="196" y="152" width="209" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="21Y-MM-Njd"/>
+                                </constraints>
+                                <state key="normal" title="Get URL"/>
+                                <connections>
+                                    <action selector="getProfileInfo:" destination="HtW-8f-ns4" eventType="touchUpInside" id="bsZ-Ju-Z5I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSH-UH-D2W">
+                                <rect key="frame" x="20" y="235" width="560" height="114"/>
+                                <state key="normal" title="URL Button">
+                                    <color key="titleColor" red="1" green="0.92733311259999995" blue="0.358075066" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openProfileInSafari:" destination="HtW-8f-ns4" eventType="touchUpInside" id="IS2-ag-6hT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="70r-Nc-CP4" firstAttribute="top" secondItem="giX-lU-Jaq" secondAttribute="bottom" constant="42" id="081-BO-ZIB"/>
+                            <constraint firstItem="giX-lU-Jaq" firstAttribute="top" secondItem="Elf-aT-DkA" secondAttribute="bottom" constant="34" id="0pk-Ma-xBf"/>
+                            <constraint firstItem="KSH-UH-D2W" firstAttribute="top" secondItem="70r-Nc-CP4" secondAttribute="bottom" constant="31" id="7Wv-ZC-Q8T"/>
+                            <constraint firstItem="KSH-UH-D2W" firstAttribute="trailing" secondItem="rG0-5i-ZTP" secondAttribute="trailingMargin" id="Ehb-0f-OmJ"/>
+                            <constraint firstItem="70r-Nc-CP4" firstAttribute="centerX" secondItem="KSH-UH-D2W" secondAttribute="centerX" id="Hod-6E-V43"/>
+                            <constraint firstItem="70r-Nc-CP4" firstAttribute="leading" secondItem="giX-lU-Jaq" secondAttribute="leading" id="TRU-KI-E2w"/>
+                            <constraint firstItem="KSH-UH-D2W" firstAttribute="leading" secondItem="rG0-5i-ZTP" secondAttribute="leadingMargin" id="uXJ-hw-Wul"/>
+                            <constraint firstItem="o2o-jI-rHl" firstAttribute="top" secondItem="KSH-UH-D2W" secondAttribute="bottom" constant="251" id="vYh-Wj-xoX"/>
+                            <constraint firstItem="giX-lU-Jaq" firstAttribute="trailing" secondItem="70r-Nc-CP4" secondAttribute="trailing" id="yst-VU-6yJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getProfileInfoButton" destination="70r-Nc-CP4" id="tHR-io-3mj"/>
+                        <outlet property="openProfileButton" destination="KSH-UH-D2W" id="6Xd-oZ-9Z9"/>
+                        <outlet property="signInButton" destination="giX-lU-Jaq" id="Fb4-Tb-0SF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="APS-NP-MwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="284"/>
+        </scene>
+    </scenes>
+</document>
